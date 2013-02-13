@@ -10,9 +10,9 @@ import java.awt.*;
  * @version 2013-02-13
  */
 public class JDoubleTextField extends JTextField {
-    public Color defColor;
-    private boolean canUseMinus = true;
-    public static final char colon = ',';
+    private Color defColor; // Keeps the default background color for resets
+    private boolean canUseMinus = true; // Stores if the user may use negative values
+    public static final char colon = ','; // Contains the colon char, in Germany it's ','
 
     /**
      * Initializes the JDoubleTextField with standard parameters
@@ -62,7 +62,7 @@ public class JDoubleTextField extends JTextField {
     /**
      * Initializes the JDoubleTextField
      */
-    public void doInit(){
+    private void doInit(){
         defColor = this.getBackground();
 
         this.addKeyListener(new KeyListener() {
